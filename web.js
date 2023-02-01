@@ -4,10 +4,10 @@ const PORT = 8001
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.use('/static', express.static(__dirname + '/views/static'));
-app.use('/Forum', express.static(__dirname + '/views/Forum'));
+app.use('/Board', express.static(__dirname + '/views/Forum'));
 app.use('/Header', express.static(__dirname + '/views/Header'));
 app.use('/Main', express.static(__dirname + '/views/Main'));
+app.use('/static', express.static(__dirname + '/views/static'));
 
 app.get('/', (req, res) => {
   res.render('index');
